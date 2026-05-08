@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURALEN Produtora — Produção audiovisual, fotografia, direção criativa e estúdio para marcas e negócios em Brasília. Conteúdo com cara de cinema.">
+  <meta name="author" content="AURALEN Produtora">
+  <meta property="og:title" content="AURALEN Produtora — Conteúdo com cara de cinema para marcas">
+  <meta property="og:description" content="Foto, vídeo, direção criativa, estúdio e posicionamento visual para transformar a imagem do seu negócio.">
+  <title>AURALEN Produtora — Conteúdo com Cara de Cinema para Marcas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="IMGS/logo.png">
+</head>
+<body>
+
+<!-- SVG Icon Sprite (hidden) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><line x1="8" y1="6" x2="8.01" y2="6"/><line x1="16" y1="6" x2="16.01" y2="6"/><line x1="12" y1="6" x2="12.01" y2="6"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="16" y1="14" x2="16.01" y2="14"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/><path d="M10 3l-4 6 6 13 6-13-4-6"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+  <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"/></symbol>
+  <symbol id="i-aperture" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="14.31" y1="8" x2="20.05" y2="17.94"/><line x1="9.69" y1="8" x2="21.17" y2="8"/><line x1="7.38" y1="12" x2="13.12" y2="2.06"/><line x1="9.69" y1="16" x2="3.95" y2="6.06"/><line x1="14.31" y1="16" x2="2.83" y2="16"/><line x1="16.62" y1="12" x2="10.88" y2="21.94"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1-4h16l1 4"/><path d="M3 9v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9"/><path d="M9 21V13h6v8"/><path d="M3 9h18"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></symbol>
+</svg>
+
+<!-- Global Stars Background -->
+<div class="global-stars" id="globalStars"></div>
+
+<!-- ========== 1. HEADER ========== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#inicio" class="header__logo" aria-label="AURALEN - Início">
+      <img src="IMGS/logo.png" alt="AURALEN Produtora" loading="eager">
+      <span class="header__logo-text">AURALEN</span>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#estudio">Estúdio</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="header__cta"><a href="#contato" class="btn btn-primary">Solicitar diagnóstico</a></div>
+    </nav>
+    <button class="header__toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a>
+  <a href="#estudio">Estúdio</a><a href="#processo">Como funciona</a><a href="#faq">FAQ</a>
+  <a href="#contato">Contato</a><a href="#contato" class="btn btn-primary">Solicitar diagnóstico</a>
+</nav>
+
+<!-- ========== 2. HERO ========== -->
+<section class="hero" id="inicio">
+  <div class="hero__bg"></div>
+  <div class="stars-container" id="heroStars"></div>
+
+  <!-- Moon (SVG crescent) in the sky -->
+  <div class="hero__moon" id="heroMoon">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero__moon-svg">
+      <defs>
+        <filter id="moonGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="soft"/>
+          <feMerge><feMergeNode in="soft"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="moonHalo" x="-120%" y="-120%" width="340%" height="340%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20"/>
+        </filter>
+        <linearGradient id="moonFill" x1="0.3" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f5e6b0"/>
+          <stop offset="50%" stop-color="#e2c97e"/>
+          <stop offset="100%" stop-color="#c9a84c"/>
+        </linearGradient>
+      </defs>
+      <!-- Ambient halo glow -->
+      <path d="M100 25 A78 78 0 1 1 100 175 A130 130 0 1 0 100 25 Z"
+            fill="rgba(226,201,126,0.1)" filter="url(#moonHalo)"/>
+      <!-- Crescent shape: outer arc r=78 bows outward, inner arc r=130 is flatter (the bite) -->
+      <path d="M100 25 A78 78 0 1 1 100 175 A130 130 0 1 0 100 25 Z"
+            fill="url(#moonFill)" filter="url(#moonGlow)"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero__content">
+      <span class="section-label reveal">AURALEN PRODUTORA</span>
+      <h1 class="hero__headline reveal reveal-delay-1">Conteúdo com cara de <em>cinema</em> para marcas que precisam parecer maiores, mais fortes e mais confiáveis.</h1>
+      <p class="hero__subheadline reveal reveal-delay-2">A AURALEN une foto, vídeo, direção criativa, estúdio e posicionamento visual para transformar a imagem de negócios em uma presença comercial forte.</p>
+      <p class="hero__support reveal reveal-delay-3">Produção audiovisual, fotografia, criativos, retratos, cobertura e estrutura para marcas e profissionais.</p>
+      <div class="hero__ctas btn-group reveal reveal-delay-3">
+        <a href="#contato" class="btn btn-primary">Solicitar diagnóstico <svg class="icon icon--sm"><use href="#i-arrow"/></svg></a>
+        <a href="#portfolio" class="btn btn-secondary">Ver portfólio</a>
+      </div>
+      <div class="hero__badges reveal reveal-delay-4">
+        <div class="hero__badge"><span class="hero__badge-icon"><svg class="icon icon--sm"><use href="#i-film"/></svg></span><span>Estúdio próprio</span></div>
+        <div class="hero__badge"><span class="hero__badge-icon"><svg class="icon icon--sm"><use href="#i-target"/></svg></span><span>Direção criativa</span></div>
+        <div class="hero__badge"><span class="hero__badge-icon"><svg class="icon icon--sm"><use href="#i-building"/></svg></span><span>Produção para negócios reais</span></div>
+        <div class="hero__badge"><span class="hero__badge-icon"><svg class="icon icon--sm"><use href="#i-pin"/></svg></span><span>Brasília e região</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3. POSICIONAMENTO ========== -->
+<section class="section section--alt" id="posicionamento">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Posicionamento</span>
+      <h2 class="section-title reveal reveal-delay-1">A AURALEN não entrega só conteúdo.<br><span class="gold">Entrega presença.</span></h2>
+    </div>
+    <div class="positioning__grid">
+      <div class="positioning__card reveal reveal-delay-1"><div class="positioning__card-icon"><svg class="icon"><use href="#i-diamond"/></svg></div><h3>Percepção de valor</h3><p>Uma imagem profissional eleva como o público enxerga seu produto, serviço e preço. É o primeiro filtro de confiança.</p></div>
+      <div class="positioning__card reveal reveal-delay-2"><div class="positioning__card-icon"><svg class="icon"><use href="#i-award"/></svg></div><h3>Autoridade visual</h3><p>Quem aparece bem, é lembrado. Sua marca precisa transmitir credibilidade antes mesmo de abrir a boca.</p></div>
+      <div class="positioning__card reveal reveal-delay-3"><div class="positioning__card-icon"><svg class="icon"><use href="#i-layers"/></svg></div><h3>Estrutura real</h3><p>Estúdio, equipamento, equipe e processo. Tudo de verdade, sem improvisos. O cliente sente quando a produção é profissional.</p></div>
+      <div class="positioning__card reveal reveal-delay-4"><div class="positioning__card-icon"><svg class="icon"><use href="#i-trending"/></svg></div><h3>Função estratégica</h3><p>Cada conteúdo tem um objetivo: converter, posicionar ou comunicar. Não criamos só conteúdo — criamos ferramentas visuais.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. PORTFÓLIO ========== -->
+<section class="section" id="portfolio">
+  <div class="container container--wide">
+    <div class="text-center">
+      <span class="section-label reveal">Portfólio</span>
+      <h2 class="section-title reveal reveal-delay-1">Portfólio real. Produções que já saíram do roteiro<br><span class="gold">e foram para o mercado.</span></h2>
+    </div>
+    <div class="portfolio__grid">
+      <div class="portfolio__item portfolio__item--featured reveal reveal-delay-1"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Saúde</span><h3 class="portfolio__item-title">AdIntus Clínica</h3><p class="portfolio__item-desc">Produção audiovisual completa para clínica de saúde integrativa. Vídeos institucionais, conteúdo para redes e fotografia profissional.</p></div></div>
+      <div class="portfolio__item reveal reveal-delay-2"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Fitness</span><h3 class="portfolio__item-title">Movimento Academia</h3><p class="portfolio__item-desc">Direção criativa e produção de conteúdo recorrente para posicionamento da marca.</p></div></div>
+      <div class="portfolio__item reveal reveal-delay-3"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Eventos</span><h3 class="portfolio__item-title">Cobertura de Eventos</h3><p class="portfolio__item-desc">Filmagem e fotografia profissional com edição cinematográfica para eventos corporativos.</p></div></div>
+      <div class="portfolio__item reveal reveal-delay-2"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Retratos</span><h3 class="portfolio__item-title">Retratos Profissionais</h3><p class="portfolio__item-desc">Sessões de retrato em estúdio com iluminação profissional para executivos e profissionais liberais.</p></div></div>
+      <div class="portfolio__item reveal reveal-delay-3"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Vídeo</span><h3 class="portfolio__item-title">Perfil @Natan_Films</h3><p class="portfolio__item-desc">Projetos autorais e comerciais publicados no perfil, com estética cinematográfica e narrativa visual.</p></div></div>
+    </div>
+    <div class="portfolio__cta reveal"><a href="#contato" class="btn btn-outline-gold">Ver portfólio completo</a></div>
+  </div>
+</section>
+
+<!-- ========== 5. DEPOIMENTOS ========== -->
+<section class="section section--alt" id="depoimentos">
+  <div class="container container--wide">
+    <div class="text-center">
+      <span class="section-label reveal">Depoimentos</span>
+      <h2 class="section-title reveal reveal-delay-1">Marcas e profissionais que<br><span class="gold">confiaram na AURALEN</span></h2>
+      <p class="section-subtitle reveal reveal-delay-2">Resultados reais, em diferentes contextos de negócio.</p>
+    </div>
+    <div class="testimonials__carousel" id="testimonialsCarousel">
+      <div class="testimonial__card reveal reveal-delay-1" data-video=""><div class="testimonial__thumb"><div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div></div><div class="testimonial__info"><p class="testimonial__name">Cliente AdIntus</p><p class="testimonial__company">AdIntus Clínica — Saúde</p><p class="testimonial__quote">"A produção elevou completamente nossa imagem no mercado."</p></div></div>
+      <div class="testimonial__card reveal reveal-delay-2" data-video=""><div class="testimonial__thumb"><div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div></div><div class="testimonial__info"><p class="testimonial__name">Cliente Movimento</p><p class="testimonial__company">Movimento Academia — Fitness</p><p class="testimonial__quote">"O conteúdo mudou a percepção do nosso público sobre a academia."</p></div></div>
+      <div class="testimonial__card reveal reveal-delay-3" data-video=""><div class="testimonial__thumb"><div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div></div><div class="testimonial__info"><p class="testimonial__name">Empresário Local</p><p class="testimonial__company">Negócio Local — Empreendedorismo</p><p class="testimonial__quote">"Depois da AURALEN, minha marca passou a ser vista de forma totalmente diferente."</p></div></div>
+    </div>
+    <div class="testimonials__dots" id="testimonialsDots"><span class="testimonials__dot active"></span><span class="testimonials__dot"></span><span class="testimonials__dot"></span></div>
+  </div>
+</section>
+
+<div class="video-modal" id="videoModal"><div class="video-modal__content"><button class="video-modal__close" id="videoModalClose">&times;</button><div class="video-modal__video" id="videoModalPlayer"><p>Vídeo de depoimento em breve</p></div><div class="video-modal__info"><h3 id="videoModalName"></h3><p id="videoModalDetail"></p></div></div></div>
+
+<!-- ========== 6. SERVIÇOS ========== -->
+<section class="section" id="servicos">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Serviços</span>
+      <h2 class="section-title reveal reveal-delay-1">Soluções criativas para marcas,<br><span class="gold">negócios e projetos especiais</span></h2>
+    </div>
+    <div class="services__grid">
+      <div class="service__card reveal reveal-delay-1"><div class="service__icon"><svg class="icon"><use href="#i-zap"/></svg></div><h3>Criativos para Performance</h3><p>Vídeos e imagens otimizados para anúncios no Instagram, Facebook, Google e TikTok. Conteúdo que converte.</p></div>
+      <div class="service__card reveal reveal-delay-2"><div class="service__icon"><svg class="icon"><use href="#i-film"/></svg></div><h3>Produção Audiovisual</h3><p>Vídeos institucionais, comerciais, manifesto e conteúdo para posicionamento de marca com qualidade cinematográfica.</p></div>
+      <div class="service__card reveal reveal-delay-3"><div class="service__icon"><svg class="icon"><use href="#i-camera"/></svg></div><h3>Fotografia</h3><p>Fotografia comercial, de produto, lifestyle e corporativa com direção de arte e tratamento profissional.</p></div>
+      <div class="service__card reveal reveal-delay-1"><div class="service__icon"><svg class="icon"><use href="#i-aperture"/></svg></div><h3>Fotografia Studio</h3><p>Sessões em estúdio próprio com iluminação controlada, cenários profissionais e direção de pose e expressão.</p></div>
+      <div class="service__card reveal reveal-delay-2"><div class="service__icon"><svg class="icon"><use href="#i-calendar"/></svg></div><h3>Eventos</h3><p>Cobertura fotográfica e audiovisual para eventos corporativos, lançamentos, workshops e confraternizações.</p></div>
+      <div class="service__card reveal reveal-delay-3"><div class="service__icon"><svg class="icon"><use href="#i-mic"/></svg></div><h3>Estúdio / Podcast</h3><p>Locação de estúdio equipado para gravação de podcast, entrevistas e conteúdo com qualidade broadcast.</p></div>
+      <div class="service__card reveal reveal-delay-1"><div class="service__icon"><svg class="icon"><use href="#i-compass"/></svg></div><h3>Drone</h3><p>Imagens aéreas cinematográficas para institucional, imobiliário, eventos e projetos especiais.</p></div>
+      <div class="service__card reveal reveal-delay-2"><div class="service__icon"><svg class="icon"><use href="#i-sparkle"/></svg></div><h3>Projetos Especiais</h3><p>Produções sob medida que fogem do convencional. Curtas, documentários, vídeos conceito e criações autorais.</p></div>
+    </div>
+    <div class="services__cta reveal"><a href="#contato" class="btn btn-primary">Entender o formato mais adequado</a></div>
+  </div>
+</section>
+
+<!-- ========== 7. CONTEXTO ========== -->
+<section class="section section--navy" id="contexto">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Para quem é</span>
+      <h2 class="section-title reveal reveal-delay-1">Marcas e profissionais que buscam<br><span class="gold">uma presença visual forte</span></h2>
+    </div>
+    <div class="context__grid">
+      <div class="context__item reveal reveal-delay-1"><div class="context__item-icon"><svg class="icon"><use href="#i-activity"/></svg></div><h3>Clínicas e saúde</h3><p>Humanização e autoridade</p></div>
+      <div class="context__item reveal reveal-delay-2"><div class="context__item-icon"><svg class="icon"><use href="#i-zap"/></svg></div><h3>Academias</h3><p>Energia e posicionamento</p></div>
+      <div class="context__item reveal reveal-delay-3"><div class="context__item-icon"><svg class="icon"><use href="#i-user"/></svg></div><h3>Profissionais</h3><p>Marca pessoal e retratos</p></div>
+      <div class="context__item reveal reveal-delay-4"><div class="context__item-icon"><svg class="icon"><use href="#i-calendar"/></svg></div><h3>Eventos</h3><p>Cobertura e registro</p></div>
+      <div class="context__item reveal reveal-delay-5"><div class="context__item-icon"><svg class="icon"><use href="#i-store"/></svg></div><h3>Negócios locais</h3><p>Visibilidade e conversão</p></div>
+      <div class="context__item reveal reveal-delay-1"><div class="context__item-icon"><svg class="icon"><use href="#i-star"/></svg></div><h3>Projetos especiais</h3><p>Criações sob medida</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 8. ESTÚDIO ========== -->
+<section class="section" id="estudio">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Estrutura</span>
+      <h2 class="section-title reveal reveal-delay-1">Mais que produção: uma estrutura pensada para criar,<br><span class="gold">apresentar e posicionar melhor a sua marca</span></h2>
+    </div>
+    <div class="studio__grid">
+      <div class="studio__block reveal reveal-delay-1"><div class="studio__block-overlay"><h3>Estúdio de Foto e Vídeo</h3><p>Espaço equipado com iluminação profissional, cenários modulares e equipamentos de última geração.</p></div></div>
+      <div class="studio__block reveal reveal-delay-2"><div class="studio__block-overlay"><h3>Podcast</h3><p>Ambiente acústico tratado com câmeras, microfones profissionais e iluminação para gravação imediata.</p></div></div>
+      <div class="studio__block reveal reveal-delay-3"><div class="studio__block-overlay"><h3>Atendimento</h3><p>Espaço dedicado para reuniões, briefing e apresentação de propostas em ambiente profissional.</p></div></div>
+      <div class="studio__block reveal reveal-delay-4"><div class="studio__block-overlay"><h3>Bastidores</h3><p>Área de preparação, maquiagem, figurino e organização pré-produção para uma experiência completa.</p></div></div>
+    </div>
+    <div class="studio__cta reveal"><a href="#contato" class="btn btn-outline-gold">Conhecer a estrutura</a></div>
+  </div>
+</section>
+
+<!-- ========== 9. PROCESSO ========== -->
+<section class="section section--alt" id="processo">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Como funciona</span>
+      <h2 class="section-title reveal reveal-delay-1">Do primeiro contato à entrega:<br><span class="gold">um processo claro e profissional</span></h2>
+    </div>
+    <div class="process__timeline">
+      <div class="process__step reveal reveal-delay-1"><div class="process__step-number">1</div><h3>Diagnóstico</h3><p>Entendemos seu momento, objetivo e necessidade real de comunicação visual.</p></div>
+      <div class="process__step reveal reveal-delay-2"><div class="process__step-number">2</div><h3>Direção Criativa</h3><p>Definimos o conceito visual, tom, referências e estilo para a produção.</p></div>
+      <div class="process__step reveal reveal-delay-3"><div class="process__step-number">3</div><h3>Planejamento</h3><p>Roteiro, cronograma, locações, equipe e tudo que a produção precisa para acontecer.</p></div>
+      <div class="process__step reveal reveal-delay-1"><div class="process__step-number">4</div><h3>Produção</h3><p>Dia de gravação e/ou sessão com equipe profissional, seguindo o planejamento aprovado.</p></div>
+      <div class="process__step reveal reveal-delay-2"><div class="process__step-number">5</div><h3>Pós-produção</h3><p>Edição, color grading, tratamento de imagem e entrega do material finalizado.</p></div>
+      <div class="process__step reveal reveal-delay-3"><div class="process__step-number">6</div><h3>Continuidade</h3><p>Acompanhamento e possibilidade de plano recorrente para manter a presença da marca.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10. FORMATOS ========== -->
+<section class="section" id="formatos">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Formatos</span>
+      <h2 class="section-title reveal reveal-delay-1">Escolha o formato<br><span class="gold">que faz sentido para você</span></h2>
+    </div>
+    <div class="formats__grid">
+      <div class="format__card reveal reveal-delay-1"><div class="format__card-icon"><svg class="icon icon--lg"><use href="#i-file"/></svg></div><h3>Projeto Pontual</h3><p>Ideal para uma produção específica: vídeo institucional, sessão fotográfica ou cobertura de evento.</p></div>
+      <div class="format__card format__card--highlight reveal reveal-delay-2"><div class="format__card-icon"><svg class="icon icon--lg"><use href="#i-refresh"/></svg></div><h3>Conteúdo Recorrente</h3><p>Plano mensal para marcas que precisam de presença contínua com produção profissional e consistente.</p></div>
+      <div class="format__card reveal reveal-delay-3"><div class="format__card-icon"><svg class="icon icon--lg"><use href="#i-film"/></svg></div><h3>Estúdio</h3><p>Locação do espaço para suas produções, com ou sem equipe AURALEN. Podcast, fotos, vídeos e mais.</p></div>
+      <div class="format__card reveal reveal-delay-4"><div class="format__card-icon"><svg class="icon icon--lg"><use href="#i-sparkle"/></svg></div><h3>Projetos Especiais</h3><p>Produções sob medida que exigem escopo diferenciado. Documentários, séries, campanhas complexas.</p></div>
+    </div>
+    <div class="formats__cta reveal"><a href="#contato" class="btn btn-primary">Solicitar proposta</a></div>
+  </div>
+</section>
+
+<!-- ========== 11. DIFERENCIAIS ========== -->
+<section class="section section--navy" id="diferenciais">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Por que a AURALEN</span>
+      <h2 class="section-title reveal reveal-delay-1">O que nos torna<br><span class="gold">diferentes de qualquer outra produtora</span></h2>
+    </div>
+    <div class="differentials__grid">
+      <div class="differential__item reveal reveal-delay-1"><div class="differential__icon"><svg class="icon icon--sm"><use href="#i-diamond"/></svg></div><div class="differential__text"><h3>Linguagem premium</h3><p>Identidade visual e estética cinematográfica em cada entrega.</p></div></div>
+      <div class="differential__item reveal reveal-delay-2"><div class="differential__icon"><svg class="icon icon--sm"><use href="#i-building"/></svg></div><div class="differential__text"><h3>Estrutura real</h3><p>Estúdio próprio, equipamento profissional e equipe dedicada.</p></div></div>
+      <div class="differential__item reveal reveal-delay-3"><div class="differential__icon"><svg class="icon icon--sm"><use href="#i-target"/></svg></div><div class="differential__text"><h3>Visão comercial</h3><p>Conteúdo pensado para gerar resultado, não só para ser bonito.</p></div></div>
+      <div class="differential__item reveal reveal-delay-4"><div class="differential__icon"><svg class="icon icon--sm"><use href="#i-pin"/></svg></div><div class="differential__text"><h3>Estúdio próprio</h3><p>Ambiente controlado para uma produção sem imprevistos.</p></div></div>
+      <div class="differential__item reveal reveal-delay-5"><div class="differential__icon"><svg class="icon icon--sm"><use href="#i-check"/></svg></div><div class="differential__text"><h3>Repertório validado</h3><p>Cases reais em saúde, fitness, eventos e negócios locais.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 12. FAQ ========== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Dúvidas frequentes</span>
+      <h2 class="section-title reveal reveal-delay-1">Perguntas que nossos clientes<br><span class="gold">sempre fazem</span></h2>
+    </div>
+    <div class="faq__list">
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-1"><span>A AURALEN atende só empresas?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Não. Atendemos empresas, profissionais liberais, criadores de conteúdo e projetos pessoais. O que nos move é entregar imagem profissional para quem quer ser visto de forma diferente.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-2"><span>Vocês fazem só vídeo?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Não. Trabalhamos com fotografia, vídeo, direção criativa, produção audiovisual completa, estúdio e até conteúdo para performance (anúncios). A entrega depende da sua necessidade.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-3"><span>Atendem fora de Brasília?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Nossa base é em Brasília, mas já realizamos produções em outras cidades e estados. Para projetos fora da região, fazemos um orçamento personalizado.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-4"><span>Têm estúdio?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Temos um estúdio próprio equipado para fotografia, vídeo, podcast e reuniões. O espaço é pensado para oferecer qualidade e conforto em cada produção.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-5"><span>Fazem direção criativa?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Direção criativa é parte essencial do nosso processo. Definimos conceito visual, referências, tom e estilo antes de qualquer gravação.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-6"><span>Trabalham com recorrência?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Oferecemos planos de conteúdo recorrente mensal para marcas que precisam manter a presença visual ativa e consistente.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-7"><span>Fazem eventos?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Realizamos cobertura de eventos corporativos, sociais, lançamentos e workshops com equipe de foto e vídeo.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-8"><span>Como funciona o orçamento?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Tudo começa com um diagnóstico gratuito. Entendemos seu contexto, necessidade e objetivo, e a partir disso montamos uma proposta personalizada com escopo, prazo e investimento claro.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 14. REFORÇO ========== -->
+<section class="reinforcement" id="reforco">
+  <div class="stars-container" id="reinforcementStars"></div>
+  <div class="container">
+    <div class="reveal" style="position:relative;z-index:2">
+      <span class="reinforcement__quote-mark">"</span>
+      <p class="reinforcement__quote">Depois da AURALEN, nossa marca passou a ser vista de forma totalmente diferente.</p>
+      <p class="reinforcement__author">— Cliente AURALEN</p>
+      <p class="reinforcement__role">Empresário · Brasília</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 13. FORMULÁRIO ========== -->
+<section class="section form-section" id="contato">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-label reveal">Contato</span>
+      <h2 class="section-title reveal reveal-delay-1">Vamos conversar sobre<br><span class="gold">o seu projeto</span></h2>
+      <p class="section-subtitle reveal reveal-delay-2">Preencha o formulário abaixo para solicitar seu diagnóstico gratuito ou fale diretamente no WhatsApp.</p>
+    </div>
+    <div class="form__wrapper">
+      <div class="form__info reveal">
+        <h3>Solicite seu diagnóstico gratuito</h3>
+        <p>Conte sobre seu negócio, objetivo e momento atual. Vamos analisar e propor a melhor solução visual para você.</p>
+        <div class="form__contact-item"><span class="form__contact-icon"><svg class="icon icon--sm"><use href="#i-phone"/></svg></span><span>(61) 99587-9534</span></div>
+        <div class="form__contact-item"><span class="form__contact-icon"><svg class="icon icon--sm"><use href="#i-mail"/></svg></span><span>contato@auralen.com.br</span></div>
+        <div class="form__contact-item"><span class="form__contact-icon"><svg class="icon icon--sm"><use href="#i-pin"/></svg></span><span>Brasília — DF</span></div>
+        <div class="form__contact-item"><span class="form__contact-icon"><svg class="icon icon--sm"><use href="#i-instagram"/></svg></span><span>@auralen.produtora</span></div>
+      </div>
+      <form class="form__grid reveal reveal-delay-1" id="contactForm">
+        <div class="form__group"><label for="form-nome">Nome <span class="required">*</span></label><input type="text" id="form-nome" name="nome" required placeholder="Seu nome completo"></div>
+        <div class="form__group"><label for="form-empresa">Empresa <span class="required">*</span></label><input type="text" id="form-empresa" name="empresa" required placeholder="Nome da empresa"></div>
+        <div class="form__group"><label for="form-whatsapp">WhatsApp <span class="required">*</span></label><input type="tel" id="form-whatsapp" name="whatsapp" required placeholder="(00) 00000-0000"></div>
+        <div class="form__group"><label for="form-email">Email <span class="required">*</span></label><input type="email" id="form-email" name="email" required placeholder="seu@email.com"></div>
+        <div class="form__group"><label for="form-cidade">Cidade</label><input type="text" id="form-cidade" name="cidade" placeholder="Sua cidade"></div>
+        <div class="form__group"><label for="form-instagram">Instagram / Site</label><input type="text" id="form-instagram" name="instagram" placeholder="@seuinstagram ou site"></div>
+        <div class="form__group"><label for="form-segmento">Segmento</label><select id="form-segmento" name="segmento"><option value="" disabled selected>Selecione...</option><option value="saude">Saúde / Clínica</option><option value="fitness">Academia / Fitness</option><option value="profissional">Profissional Liberal</option><option value="eventos">Eventos</option><option value="negocio-local">Negócio Local</option><option value="especial">Projeto Especial</option><option value="outro">Outro</option></select></div>
+        <div class="form__group"><label for="form-servico">Serviço desejado</label><select id="form-servico" name="servico"><option value="" disabled selected>Selecione...</option><option value="criativos">Criativos para Performance</option><option value="audiovisual">Produção Audiovisual</option><option value="fotografia">Fotografia</option><option value="fotografia-studio">Fotografia Studio</option><option value="eventos">Eventos</option><option value="podcast">Estúdio / Podcast</option><option value="drone">Drone</option><option value="especial">Projetos Especiais</option><option value="nao-sei">Não sei ainda</option></select></div>
+        <div class="form__group"><label for="form-momento">Momento atual</label><select id="form-momento" name="momento"><option value="" disabled selected>Selecione...</option><option value="inicio">Estou começando o negócio</option><option value="reposicionando">Quero reposicionar a marca</option><option value="crescendo">Estou crescendo e preciso de conteúdo</option><option value="recorrente">Já produzo, mas quero qualidade maior</option><option value="pontual">Preciso de algo pontual</option></select></div>
+        <div class="form__group"><label for="form-prazo">Prazo</label><select id="form-prazo" name="prazo"><option value="" disabled selected>Selecione...</option><option value="urgente">Urgente (próximos dias)</option><option value="2-semanas">Até 2 semanas</option><option value="1-mes">Até 1 mês</option><option value="flexivel">Flexível</option></select></div>
+        <div class="form__group"><label for="form-investimento">Investimento previsto</label><select id="form-investimento" name="investimento"><option value="" disabled selected>Selecione...</option><option value="ate-2k">Até R$ 2.000</option><option value="2k-5k">R$ 2.000 - R$ 5.000</option><option value="5k-10k">R$ 5.000 - R$ 10.000</option><option value="acima-10k">Acima de R$ 10.000</option><option value="nao-sei">Não sei ainda</option></select></div>
+        <div class="form__group"><label for="form-origem">Como nos encontrou?</label><select id="form-origem" name="origem"><option value="" disabled selected>Selecione...</option><option value="instagram">Instagram</option><option value="google">Google</option><option value="indicacao">Indicação</option><option value="evento">Evento</option><option value="outro">Outro</option></select></div>
+        <div class="form__group form__group--full"><label for="form-descricao">Descreva seu projeto</label><textarea id="form-descricao" name="descricao" rows="4" placeholder="Conte um pouco mais sobre o que você precisa..."></textarea></div>
+        <div class="form__actions">
+          <button type="submit" class="btn btn-primary" id="form-submit-btn">Quero meu diagnóstico <svg class="icon icon--sm"><use href="#i-arrow"/></svg></button>
+          <a href="https://wa.me/5561995879534?text=Olá! Vim pelo site e gostaria de solicitar um diagnóstico." class="btn btn-secondary" target="_blank" rel="noopener" id="form-whatsapp-btn"><svg class="icon icon--sm"><use href="#i-whatsapp"/></svg> Falar no WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 15. FOOTER ========== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="IMGS/logo.png" alt="AURALEN Produtora">
+        <p>Produção audiovisual, fotografia, direção criativa e estúdio para marcas que precisam de presença visual forte e profissional.</p>
+        <p class="footer__cities">Brasília — DF e região · Atendemos outras cidades sob consulta</p>
+      </div>
+      <div class="footer__col">
+        <h4>Links rápidos</h4>
+        <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a>
+        <a href="#estudio">Estúdio</a><a href="#processo">Como funciona</a><a href="#faq">FAQ</a><a href="#contato">Contato</a>
+      </div>
+      <div class="footer__col">
+        <h4>Serviços</h4>
+        <a href="#servicos">Criativos para Performance</a><a href="#servicos">Produção Audiovisual</a>
+        <a href="#servicos">Fotografia</a><a href="#servicos">Estúdio / Podcast</a>
+        <a href="#servicos">Eventos</a><a href="#servicos">Drone</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5561995879534" target="_blank" rel="noopener"><svg class="icon icon--sm"><use href="#i-phone"/></svg> (61) 99587-9534</a>
+        <a href="mailto:contato@auralen.com.br"><svg class="icon icon--sm"><use href="#i-mail"/></svg> contato@auralen.com.br</a>
+        <a href="https://instagram.com/auralen.produtora" target="_blank" rel="noopener"><svg class="icon icon--sm"><use href="#i-instagram"/></svg> @auralen.produtora</a>
+        <div class="footer__social">
+          <a href="https://instagram.com/auralen.produtora" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon icon--sm"><use href="#i-instagram"/></svg></a>
+          <a href="https://wa.me/5561995879534" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon icon--sm"><use href="#i-whatsapp"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 AURALEN Produtora. Todos os direitos reservados.</p>
+      <p>Feito para marcas que buscam presença.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating -->
+<a href="https://wa.me/5561995879534?text=Olá! Vim pelo site e gostaria de saber mais sobre os serviços da AURALEN." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" id="whatsapp-float-btn">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><use href="#i-whatsapp"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
