@@ -191,21 +191,24 @@ function initActiveNav() {
    STARRY SKY ANIMATION
    ============================================ */
 function initStars() {
+  const isMobile = window.innerWidth <= 768;
+  const f = isMobile ? 0.25 : 1; // Reduces stars to 25% on mobile for performance
+
   // Hero — dense starry sky
   createStarField('heroStars', {
-    dim: 120,    // Many small dim white/blue stars
-    mid: 50,     // Gold-tinted mid stars
-    bright: 15,  // Bright glowing stars
-    accent: 5,   // Extra bright accent stars
+    dim: Math.floor(120 * f),    // Many small dim white/blue stars
+    mid: Math.floor(50 * f),     // Gold-tinted mid stars
+    bright: Math.floor(15 * f),  // Bright glowing stars
+    accent: Math.floor(5 * f),   // Extra bright accent stars
     shooting: true
   });
   // Reinforcement section
   createStarField('reinforcementStars', {
-    dim: 40, mid: 15, bright: 5, accent: 2, shooting: false
+    dim: Math.floor(40 * f), mid: Math.floor(15 * f), bright: Math.floor(5 * f), accent: Math.floor(2 * f), shooting: false
   });
   // Global subtle background
   createStarField('globalStars', {
-    dim: 30, mid: 10, bright: 3, accent: 0, shooting: false
+    dim: Math.floor(30 * f), mid: Math.floor(10 * f), bright: Math.floor(3 * f), accent: 0, shooting: false
   });
 }
 
