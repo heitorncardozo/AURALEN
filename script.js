@@ -170,11 +170,20 @@ function initForm() {
         console.error('Erro ao salvar no Notion:', error);
       }
 
-      btn.innerHTML = 'Redirecionando...';
-
       setTimeout(() => {
-        window.open(`https://wa.me/5561995879534?text=${encodeURIComponent(msg)}`, '_blank');
-        btn.innerHTML = orig; btn.style.opacity = ''; btn.disabled = false; form.reset();
+        btn.innerHTML = 'Diagnóstico solicitado! ✓'; 
+        btn.style.background = '#25D366'; // Cor de sucesso (verde)
+        btn.style.color = '#FFFFFF';
+        btn.style.opacity = '1';
+        form.reset();
+        
+        // Retorna o botão ao estado original após 4 segundos
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 4000);
       }, 400);
     }
   });
