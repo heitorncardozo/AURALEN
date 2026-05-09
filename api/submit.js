@@ -111,13 +111,13 @@ export default async function handler(req, res) {
         await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
-            'Authorization': \`Bearer \${RESEND_API_KEY}\`,
+            'Authorization': `Bearer ${RESEND_API_KEY}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             from: process.env.RESEND_FROM_EMAIL || 'AURALEN Leads <onboarding@resend.dev>',
             to: NOTIFICATION_EMAIL,
-            subject: \`Novo Lead: \${nome} - AURALEN\`,
+            subject: `Novo Lead: ${nome} - AURALEN`,
             html: emailHtml
           })
         });
