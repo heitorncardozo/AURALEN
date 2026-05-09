@@ -85,8 +85,50 @@ export default async function handler(req, res) {
       });
     }
 
-    // ── 7. Sucesso! ───────────────────────────
-    return res.status(200).json({ ok: true, message: 'Lead salvo com sucesso' });
+    // ── 7. Envia Notificação por Email (Resend) 
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL;
+
+    if (RESEND_API_KEY && NOTIFICATION_EMAIL) {
+      try {
+        const emailHtml = `
+          <div style="font-family: sans-serif; color: #121830; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #E2C97E; border-radius: 8px;">
+            <h2 style="color: #C9A84C;">Novo Lead Recebido! 🎬</h2>
+            <p>Você acabou de receber um novo lead pela Landing Page da AURALEN.</p>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 8px;"><strong>👤 Nome:</strong> ${nome}</li>
+              <li style="margin-bottom: 8px;"><strong>🏢 Empresa:</strong> ${empresa || 'Não informado'}</li>
+              <li style="margin-bottom: 8px;"><strong>📱 WhatsApp:</strong> ${whatsapp}</li>
+              <li style="margin-bottom: 8px;"><strong>✉️ Email:</strong> ${email}</li>
+              <li style="margin-bottom: 8px;"><strong>🎯 Segmento:</strong> ${segmento || 'Não informado'}</li>
+              <li style="margin-bottom: 8px;"><strong>🎥 Serviço:</strong> ${servico || 'Não informado'}</li>
+              <li style="margin-bottom: 8px;"><strong>💰 Investimento:</strong> ${investimento || 'Não informado'}</li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 14px; color: #8A8FA3;">O lead já foi salvo automaticamente no seu Notion.</p>
+          </div>
+        `;
+
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': \`Bearer \${RESEND_API_KEY}\`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: process.env.RESEND_FROM_EMAIL || 'AURALEN Leads <onboarding@resend.dev>',
+            to: NOTIFICATION_EMAIL,
+            subject: \`Novo Lead: \${nome} - AURALEN\`,
+            html: emailHtml
+          })
+        });
+      } catch (emailError) {
+        console.error('Erro ao enviar email:', emailError);
+        // Não quebramos a resposta se o email falhar, o lead já está no Notion!
+      }
+    }
+
+    // ── 8. Sucesso! ───────────────────────────
+    return res.status(200).json({ ok: true, message: 'Lead salvo e notificado com sucesso' });
 
   } catch (err) {
     console.error('Erro inesperado:', err);
