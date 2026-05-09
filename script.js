@@ -128,7 +128,7 @@ function initForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
     const required = ['nome', 'empresa', 'whatsapp', 'email'];
@@ -155,11 +155,27 @@ function initForm() {
     const btn = document.getElementById('form-submit-btn');
     if (btn) {
       const orig = btn.innerHTML;
-      btn.innerHTML = 'Redirecionando...'; btn.style.opacity = '0.7'; btn.disabled = true;
+      btn.innerHTML = 'Enviando...'; btn.style.opacity = '0.7'; btn.disabled = true;
+
+      // === INTEGRAÇÃO COM O NOTION (API VERCEL) ===
+      const webhookUrl = '/api/submit'; 
+
+      try {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch (error) {
+        console.error('Erro ao salvar no Notion:', error);
+      }
+
+      btn.innerHTML = 'Redirecionando...';
+
       setTimeout(() => {
         window.open(`https://wa.me/5561995879534?text=${encodeURIComponent(msg)}`, '_blank');
         btn.innerHTML = orig; btn.style.opacity = ''; btn.disabled = false; form.reset();
-      }, 600);
+      }, 400);
     }
   });
 
