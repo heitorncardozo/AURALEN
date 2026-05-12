@@ -83,21 +83,56 @@ function initFAQ() {
 /* ---- Video Modal ---- */
 function initVideoModal() {
   const modal = document.getElementById('videoModal');
+  const wrapper = modal?.querySelector('.video-modal__wrapper');
   const close = document.getElementById('videoModalClose');
   const name = document.getElementById('videoModalName');
   const detail = document.getElementById('videoModalDetail');
-  if (!modal) return;
+  if (!modal || !wrapper) return;
 
-  document.querySelectorAll('.testimonial__card').forEach(card => {
-    card.addEventListener('click', () => {
-      if (name) name.textContent = card.querySelector('.testimonial__name')?.textContent || '';
-      if (detail) detail.textContent = card.querySelector('.testimonial__company')?.textContent || '';
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+  const openModal = (videoSrc, title, desc) => {
+    if (name) name.textContent = title || '';
+    if (detail) detail.textContent = desc || '';
+    
+    // Clear wrapper and add video element
+    const type = videoSrc.endsWith('.mov') ? 'video/quicktime' : 'video/mp4';
+    wrapper.innerHTML = `
+      <video controls autoplay class="video-modal__element">
+        <source src="${videoSrc}" type="${type}">
+        Seu navegador não suporta vídeos.
+      </video>
+    `;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Portfolio items
+  document.querySelectorAll('.portfolio__item[data-video]').forEach(item => {
+    item.addEventListener('click', () => {
+      const src = item.getAttribute('data-video');
+      const title = item.querySelector('.portfolio__item-title')?.textContent;
+      const tag = item.querySelector('.portfolio__item-tag')?.textContent;
+      openModal(src, title, tag);
     });
   });
 
-  const closeModal = () => { modal.classList.remove('active'); document.body.style.overflow = ''; };
+  // Testimonials
+  document.querySelectorAll('.testimonial__card').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.getAttribute('data-video'); // Support data-video on testimonials too
+      if (!src) return; // Only open if video exists
+      const title = card.querySelector('.testimonial__name')?.textContent;
+      const company = card.querySelector('.testimonial__company')?.textContent;
+      openModal(src, title, company);
+    });
+  });
+
+  const closeModal = () => { 
+    modal.classList.remove('active'); 
+    wrapper.innerHTML = ''; // Stop video playback
+    document.body.style.overflow = ''; 
+  };
+  
   if (close) close.addEventListener('click', closeModal);
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });

@@ -48,6 +48,7 @@
   <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
   <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
 </svg>
 
 <!-- Global Stars Background -->
@@ -87,31 +88,7 @@
   <div class="hero__bg"></div>
   <div class="stars-container" id="heroStars"></div>
 
-  <!-- Moon (SVG crescent) in the sky -->
-  <div class="hero__moon" id="heroMoon">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero__moon-svg">
-      <defs>
-        <filter id="moonGlow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="soft"/>
-          <feMerge><feMergeNode in="soft"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="moonHalo" x="-120%" y="-120%" width="340%" height="340%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="20"/>
-        </filter>
-        <linearGradient id="moonFill" x1="0.3" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#f5e6b0"/>
-          <stop offset="50%" stop-color="#e2c97e"/>
-          <stop offset="100%" stop-color="#c9a84c"/>
-        </linearGradient>
-      </defs>
-      <!-- Ambient halo glow -->
-      <path d="M100 25 A78 78 0 1 1 100 175 A130 130 0 1 0 100 25 Z"
-            fill="rgba(226,201,126,0.1)" filter="url(#moonHalo)"/>
-      <!-- Crescent shape: outer arc r=78 bows outward, inner arc r=130 is flatter (the bite) -->
-      <path d="M100 25 A78 78 0 1 1 100 175 A130 130 0 1 0 100 25 Z"
-            fill="url(#moonFill)" filter="url(#moonGlow)"/>
-    </svg>
-  </div>
+
 
   <div class="container">
     <div class="hero__content">
@@ -157,11 +134,78 @@
       <h2 class="section-title reveal reveal-delay-1">Portfólio real. Produções que já saíram do roteiro<br><span class="gold">e foram para o mercado.</span></h2>
     </div>
     <div class="portfolio__grid">
-      <div class="portfolio__item portfolio__item--featured reveal reveal-delay-1"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Saúde</span><h3 class="portfolio__item-title">AdIntus Clínica</h3><p class="portfolio__item-desc">Produção audiovisual completa para clínica de saúde integrativa. Vídeos institucionais, conteúdo para redes e fotografia profissional.</p></div></div>
-      <div class="portfolio__item reveal reveal-delay-2"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Fitness</span><h3 class="portfolio__item-title">Movimento Academia</h3><p class="portfolio__item-desc">Direção criativa e produção de conteúdo recorrente para posicionamento da marca.</p></div></div>
-      <div class="portfolio__item reveal reveal-delay-3"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Eventos</span><h3 class="portfolio__item-title">Cobertura de Eventos</h3><p class="portfolio__item-desc">Filmagem e fotografia profissional com edição cinematográfica para eventos corporativos.</p></div></div>
-      <div class="portfolio__item reveal reveal-delay-2"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Retratos</span><h3 class="portfolio__item-title">Retratos Profissionais</h3><p class="portfolio__item-desc">Sessões de retrato em estúdio com iluminação profissional para executivos e profissionais liberais.</p></div></div>
-      <div class="portfolio__item reveal reveal-delay-3"><div class="portfolio__item-bg"></div><div class="portfolio__item-overlay"><span class="portfolio__item-tag">Vídeo</span><h3 class="portfolio__item-title">Perfil @Natan_Films</h3><p class="portfolio__item-desc">Projetos autorais e comerciais publicados no perfil, com estética cinematográfica e narrativa visual.</p></div></div>
+      <!-- Item 1: AdIntus (Featured Video) -->
+      <div class="portfolio__item portfolio__item--featured reveal reveal-delay-1" 
+           data-video="videos/portfolio/ADINTUS_CLINICA.mp4?v=1">
+        <div class="portfolio__item-bg" style="background-image: url('IMGS/capas_videos/ADINTUS.jpg?v=2');"></div>
+        <div class="portfolio__item-overlay">
+          <span class="portfolio__item-tag">Saúde</span>
+          <h3 class="portfolio__item-title">AdIntus Clínica</h3>
+          <p class="portfolio__item-desc">Produção audiovisual completa para clínica de saúde integrativa. Vídeos institucionais e conteúdo estratégico.</p>
+          <div class="portfolio__item-play"><svg class="icon"><use href="#i-play"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Item 2: Movimento Academia (Video) -->
+      <div class="portfolio__item reveal reveal-delay-2" 
+           data-video="videos/portfolio/ACADEMIA_MOVIMENTO.mp4?v=1">
+        <div class="portfolio__item-bg" style="background-image: url('IMGS/capas_videos/MOVIMENTO.jpg?v=2');"></div>
+        <div class="portfolio__item-overlay">
+          <span class="portfolio__item-tag">Fitness</span>
+          <h3 class="portfolio__item-title">Movimento Academia</h3>
+          <p class="portfolio__item-desc">Direção criativa e produção de conteúdo de alto impacto para performance.</p>
+          <div class="portfolio__item-play"><svg class="icon--sm"><use href="#i-play"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Item 3: Royal Parfums (Video) -->
+      <div class="portfolio__item reveal reveal-delay-3" 
+           data-video="videos/portfolio/ROYAL_PARFUMS.mp4?v=1">
+        <div class="portfolio__item-bg" style="background-image: url('IMGS/capas_videos/ROYAL_PARFUMS.jpg?v=2');"></div>
+        <div class="portfolio__item-overlay">
+          <span class="portfolio__item-tag">Lifestyle</span>
+          <h3 class="portfolio__item-title">Royal Parfums</h3>
+          <p class="portfolio__item-desc">Produção cinematográfica para marca de perfumaria de luxo.</p>
+          <div class="portfolio__item-play"><svg class="icon--sm"><use href="#i-play"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Item 4: Retratos (Grid) -->
+      <div class="portfolio__item portfolio__item--retratos reveal reveal-delay-2">
+        <div class="retratos-grid">
+           <div class="retratos-grid__item" style="background-image: url('IMGS/portfolio/_DSC9751.jpg?v=2');"></div>
+           <div class="retratos-grid__item" style="background-image: url('IMGS/portfolio/_DSC9778.jpg?v=2');"></div>
+        </div>
+        <div class="portfolio__item-overlay">
+          <span class="portfolio__item-tag">Retratos</span>
+          <h3 class="portfolio__item-title">Estúdio de Fotos</h3>
+          <p class="portfolio__item-desc">Posicionamento de imagem e branding pessoal de alto padrão.</p>
+        </div>
+      </div>
+
+      <!-- Item 5: Natan Films (Video) -->
+      <div class="portfolio__item reveal reveal-delay-1" 
+           data-video="videos/portfolio/NATAN_FILMS.mp4?v=1">
+        <div class="portfolio__item-bg" style="background-image: url('IMGS/capas_videos/NATAN_FILMS.jpg?v=2');"></div>
+        <div class="portfolio__item-overlay">
+          <span class="portfolio__item-tag">Vídeo</span>
+          <h3 class="portfolio__item-title">Perfil @Natan_Films</h3>
+          <p class="portfolio__item-desc">Narrativa visual e estética cinematográfica em projetos autorais.</p>
+          <div class="portfolio__item-play"><svg class="icon--sm"><use href="#i-play"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Item 6: Drone (Video) -->
+      <div class="portfolio__item reveal reveal-delay-2" 
+           data-video="videos/portfolio/AURALEN_DRONE.mp4?v=1">
+        <div class="portfolio__item-bg" style="background-image: url('IMGS/capas_videos/DRONE.jpg?v=2');"></div>
+        <div class="portfolio__item-overlay">
+          <span class="portfolio__item-tag">Drone</span>
+          <h3 class="portfolio__item-title">Imagens Aéreas</h3>
+          <p class="portfolio__item-desc">Captação em 4K para perspectivas únicas em grandes produções.</p>
+          <div class="portfolio__item-play"><svg class="icon--sm"><use href="#i-play"/></svg></div>
+        </div>
+      </div>
     </div>
     <div class="portfolio__cta reveal"><a href="#contato" class="btn btn-outline-gold">Ver portfólio completo</a></div>
   </div>
@@ -176,15 +220,34 @@
       <p class="section-subtitle reveal reveal-delay-2">Resultados reais, em diferentes contextos de negócio.</p>
     </div>
     <div class="testimonials__carousel" id="testimonialsCarousel">
-      <div class="testimonial__card reveal reveal-delay-1" data-video=""><div class="testimonial__thumb"><div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div></div><div class="testimonial__info"><p class="testimonial__name">Cliente AdIntus</p><p class="testimonial__company">AdIntus Clínica — Saúde</p><p class="testimonial__quote">"A produção elevou completamente nossa imagem no mercado."</p></div></div>
-      <div class="testimonial__card reveal reveal-delay-2" data-video=""><div class="testimonial__thumb"><div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div></div><div class="testimonial__info"><p class="testimonial__name">Cliente Movimento</p><p class="testimonial__company">Movimento Academia — Fitness</p><p class="testimonial__quote">"O conteúdo mudou a percepção do nosso público sobre a academia."</p></div></div>
-      <div class="testimonial__card reveal reveal-delay-3" data-video=""><div class="testimonial__thumb"><div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div></div><div class="testimonial__info"><p class="testimonial__name">Empresário Local</p><p class="testimonial__company">Negócio Local — Empreendedorismo</p><p class="testimonial__quote">"Depois da AURALEN, minha marca passou a ser vista de forma totalmente diferente."</p></div></div>
+      <!-- Testimonial: Gilda Pignata (AdIntus) -->
+      <div class="testimonial__card reveal reveal-delay-1" data-video="videos/depoimentos/DEPOIMENTO_ADINTUS.mov?v=1" style="max-width: 400px; margin: 0 auto;">
+        <div class="testimonial__thumb" style="background-image: url('IMGS/capas_videos/DEPOIMENTO_ADINTUS.jpg?v=2');">
+          <div class="testimonial__play"><svg class="icon icon--sm"><use href="#i-play"/></svg></div>
+        </div>
+        <div class="testimonial__info">
+          <p class="testimonial__name">Gilda Pignata</p>
+          <p class="testimonial__company">AdIntus Clínica</p>
+          <p class="testimonial__quote">"A produção elevou completamente nossa imagem no mercado. O resultado superou nossas expectativas."</p>
+        </div>
+      </div>
     </div>
-    <div class="testimonials__dots" id="testimonialsDots"><span class="testimonials__dot active"></span><span class="testimonials__dot"></span><span class="testimonials__dot"></span></div>
   </div>
 </section>
 
-<div class="video-modal" id="videoModal"><div class="video-modal__content"><button class="video-modal__close" id="videoModalClose">&times;</button><div class="video-modal__video" id="videoModalPlayer"><p>Vídeo de depoimento em breve</p></div><div class="video-modal__info"><h3 id="videoModalName"></h3><p id="videoModalDetail"></p></div></div></div>
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal__content">
+    <button class="video-modal__close" id="videoModalClose"><svg class="icon"><use href="#i-close"/></svg></button>
+    <div class="video-modal__wrapper">
+      <!-- Video injected via JS -->
+    </div>
+    <div class="video-modal__info">
+      <h3 id="videoModalName"></h3>
+      <p id="videoModalDetail"></p>
+    </div>
+  </div>
+</div>
 
 <!-- ========== 6. SERVIÇOS ========== -->
 <section class="section" id="servicos">
@@ -233,10 +296,8 @@
       <h2 class="section-title reveal reveal-delay-1">Mais que produção: uma estrutura pensada para criar,<br><span class="gold">apresentar e posicionar melhor a sua marca</span></h2>
     </div>
     <div class="studio__grid">
-      <div class="studio__block reveal reveal-delay-1"><div class="studio__block-overlay"><h3>Estúdio de Foto e Vídeo</h3><p>Espaço equipado com iluminação profissional, cenários modulares e equipamentos de última geração.</p></div></div>
-      <div class="studio__block reveal reveal-delay-2"><div class="studio__block-overlay"><h3>Podcast</h3><p>Ambiente acústico tratado com câmeras, microfones profissionais e iluminação para gravação imediata.</p></div></div>
-      <div class="studio__block reveal reveal-delay-3"><div class="studio__block-overlay"><h3>Atendimento</h3><p>Espaço dedicado para reuniões, briefing e apresentação de propostas em ambiente profissional.</p></div></div>
-      <div class="studio__block reveal reveal-delay-4"><div class="studio__block-overlay"><h3>Bastidores</h3><p>Área de preparação, maquiagem, figurino e organização pré-produção para uma experiência completa.</p></div></div>
+      <div class="studio__block reveal reveal-delay-1" style="background-image: url('IMGS/portfolio/estudio_foto_video.png'); background-size: cover; background-position: center;"><div class="studio__block-overlay"><h3>Estúdio de Foto e Vídeo</h3><p>Espaço equipado com iluminação profissional, cenários modulares e equipamentos de última geração.</p></div></div>
+      <div class="studio__block reveal reveal-delay-2" style="background-image: url('IMGS/portfolio/bastidores.jpg'); background-size: cover; background-position: center;"><div class="studio__block-overlay"><h3>Bastidores</h3><p>Área de preparação, maquiagem, figurino e organização pré-produção para uma experiência completa.</p></div></div>
     </div>
     <div class="studio__cta reveal"><a href="#contato" class="btn btn-outline-gold">Conhecer a estrutura</a></div>
   </div>
@@ -305,7 +366,7 @@
       <div class="faq__item reveal"><button class="faq__question" id="faq-q-1"><span>A AURALEN atende só empresas?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Não. Atendemos empresas, profissionais liberais, criadores de conteúdo e projetos pessoais. O que nos move é entregar imagem profissional para quem quer ser visto de forma diferente.</div></div></div>
       <div class="faq__item reveal"><button class="faq__question" id="faq-q-2"><span>Vocês fazem só vídeo?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Não. Trabalhamos com fotografia, vídeo, direção criativa, produção audiovisual completa, estúdio e até conteúdo para performance (anúncios). A entrega depende da sua necessidade.</div></div></div>
       <div class="faq__item reveal"><button class="faq__question" id="faq-q-3"><span>Atendem fora de Brasília?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Nossa base é em Brasília, mas já realizamos produções em outras cidades e estados. Para projetos fora da região, fazemos um orçamento personalizado.</div></div></div>
-      <div class="faq__item reveal"><button class="faq__question" id="faq-q-4"><span>Têm estúdio?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Temos um estúdio próprio equipado para fotografia, vídeo, podcast e reuniões. O espaço é pensado para oferecer qualidade e conforto em cada produção.</div></div></div>
+      <div class="faq__item reveal"><button class="faq__question" id="faq-q-4"><span>Têm estúdio?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Temos um estúdio próprio equipado para fotografia e vídeo. O espaço é pensado para oferecer qualidade, controle de iluminação e conforto em cada produção.</div></div></div>
       <div class="faq__item reveal"><button class="faq__question" id="faq-q-5"><span>Fazem direção criativa?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Direção criativa é parte essencial do nosso processo. Definimos conceito visual, referências, tom e estilo antes de qualquer gravação.</div></div></div>
       <div class="faq__item reveal"><button class="faq__question" id="faq-q-6"><span>Trabalham com recorrência?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Oferecemos planos de conteúdo recorrente mensal para marcas que precisam manter a presença visual ativa e consistente.</div></div></div>
       <div class="faq__item reveal"><button class="faq__question" id="faq-q-7"><span>Fazem eventos?</span><span class="faq__icon"><svg class="icon"><use href="#i-plus"/></svg></span></button><div class="faq__answer"><div class="faq__answer-inner">Sim. Realizamos cobertura de eventos corporativos, sociais, lançamentos e workshops com equipe de foto e vídeo.</div></div></div>

@@ -170,32 +170,7 @@ input,select,textarea { font-family:var(--font-body); font-size:1rem; }
   100% { transform:translateX(85vw) translateY(25vh); opacity:0; width:120px; }
 }
 
-/* Hero Moon — SVG crescent */
-.hero__moon {
-  position:absolute;
-  top:5%;
-  right:8%;
-  z-index:1;
-  width:clamp(100px, 13vw, 180px);
-  height:clamp(100px, 13vw, 180px);
-  pointer-events:none;
-  animation:moonFloat 8s ease-in-out infinite alternate;
-}
-.hero__moon-svg {
-  width:100%;
-  height:100%;
-  overflow:visible;
-  animation:moonGlow 5s ease-in-out infinite alternate;
-}
 
-@keyframes moonFloat {
-  0% { transform:translateY(0); }
-  100% { transform:translateY(-8px); }
-}
-@keyframes moonGlow {
-  0% { filter:brightness(0.9) drop-shadow(0 0 8px rgba(226,201,126,0.2)); }
-  100% { filter:brightness(1.1) drop-shadow(0 0 15px rgba(226,201,126,0.35)); }
-}
 
 /* Global subtle star bg */
 .global-stars {
@@ -263,7 +238,7 @@ input,select,textarea { font-family:var(--font-body); font-size:1rem; }
    ============================================ */
 .portfolio__grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--space-sm); margin-top:var(--space-xl); }
 .portfolio__item { position:relative; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:16/10; cursor:pointer; background:var(--navy); }
-.portfolio__item-bg { width:100%; height:100%; background:linear-gradient(135deg, var(--navy), var(--navy-light)); transition:transform var(--transition-slow); }
+.portfolio__item-bg { width:100%; height:100%; background-image: linear-gradient(135deg, var(--navy), var(--navy-light)); background-position: center; background-size: cover; transition: transform var(--transition-slow); }
 .portfolio__item:hover .portfolio__item-bg { transform:scale(1.05); }
 .portfolio__item-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(11,14,23,0.95) 0%, rgba(11,14,23,0.2) 50%, transparent 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:var(--space-md); transition:all var(--transition-base); }
 .portfolio__item-tag { font-family:var(--font-heading); font-size:0.68rem; font-weight:600; text-transform:uppercase; letter-spacing:2px; color:var(--gold); margin-bottom:var(--space-xs); }
@@ -273,6 +248,32 @@ input,select,textarea { font-family:var(--font-body); font-size:1rem; }
 .portfolio__cta { text-align:center; margin-top:var(--space-xl); }
 .portfolio__item--featured { grid-column:span 2; grid-row:span 2; aspect-ratio:auto; }
 
+.portfolio__item--retratos {
+  cursor: default;
+}
+.portfolio__item--retratos .portfolio__item-bg {
+  display: none;
+}
+.retratos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+  gap: 4px;
+  background: var(--dark);
+}
+.retratos-grid__item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform var(--transition-slow);
+}
+.portfolio__item--retratos:hover .retratos-grid__item {
+  transform: scale(1.05);
+}
+
 /* ============================================
    5. DEPOIMENTOS
    ============================================ */
@@ -280,7 +281,7 @@ input,select,textarea { font-family:var(--font-body); font-size:1rem; }
 .testimonials__carousel::-webkit-scrollbar { display:none; }
 .testimonial__card { flex:0 0 320px; scroll-snap-align:start; background:rgba(255,255,255,0.02); border:1px solid var(--glass-border); border-radius:var(--radius-md); overflow:hidden; transition:all var(--transition-base); cursor:pointer; }
 .testimonial__card:hover { border-color:rgba(255,255,255,0.1); transform:translateY(-3px); }
-.testimonial__thumb { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg, var(--navy), var(--navy-light)); position:relative; display:flex; align-items:center; justify-content:center; }
+.testimonial__thumb { width:100%; aspect-ratio:16/9; background-image: linear-gradient(135deg, var(--navy), var(--navy-light)); background-position: center; background-size: cover; position:relative; display:flex; align-items:center; justify-content:center; }
 .testimonial__play { width:52px; height:52px; border-radius:var(--radius-full); background:rgba(201,168,76,0.85); display:flex; align-items:center; justify-content:center; color:var(--dark); transition:all var(--transition-base); position:absolute; z-index:2; }
 .testimonial__card:hover .testimonial__play { transform:scale(1.08); box-shadow:var(--shadow-gold); }
 .testimonial__info { padding:var(--space-md); }
@@ -297,7 +298,22 @@ input,select,textarea { font-family:var(--font-body); font-size:1rem; }
 .video-modal__content { max-width:800px; width:100%; position:relative; }
 .video-modal__close { position:absolute; top:-40px; right:0; color:var(--white); font-size:1.5rem; cursor:pointer; transition:color var(--transition-fast); }
 .video-modal__close:hover { color:var(--gold); }
-.video-modal__video { width:100%; aspect-ratio:16/9; background:var(--dark); border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; color:var(--gray); font-size:0.9rem; }
+.video-modal__wrapper {
+  position:relative;
+  width:100%;
+  background:#000;
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.video-modal__element {
+  max-width:100%;
+  max-height:80vh;
+  display:block;
+  object-fit:contain;
+}
 .video-modal__info { padding:var(--space-md) 0; }
 .video-modal__info h3 { font-family:var(--font-heading); font-size:1rem; margin-bottom:0.3rem; }
 .video-modal__info p { font-size:0.88rem; color:var(--gray); }
@@ -463,7 +479,7 @@ input,select,textarea { font-family:var(--font-body); font-size:1rem; }
   .star--dim, .star--mid { box-shadow:none; }
   .section { padding:var(--space-2xl) 0; }
   .hero { min-height:100svh; }
-  .hero__moon { top:3%; right:5%; width:70px; height:70px; opacity:0.7; }
+
   .hero__badges { flex-direction:column; gap:var(--space-sm); }
   .portfolio__grid { grid-template-columns:1fr; }
   .portfolio__item--featured { grid-column:span 1; grid-row:span 1; aspect-ratio:16/10; }
